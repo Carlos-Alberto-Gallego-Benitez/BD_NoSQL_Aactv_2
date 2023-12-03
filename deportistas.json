@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "656b9beefe690b2bc6ceda44"
+  },
+  "nombre": "Juan",
+  "apellido": "Urrueta",
+  "edad": 24,
+  "telefono": {
+    "$numberLong": "3205678903"
+  },
+  "equipo": "Los Chavales",
+  "direccion": "Calle 57 cc # 24 - 56",
+  "documento": 3445657
+},
+{
+  "_id": {
+    "$oid": "656b9beefe690b2bc6ceda45"
+  },
+  "nombre": "Pedro",
+  "apellido": "Benítez",
+  "edad": 34,
+  "telefono": {
+    "$numberLong": "3205678903"
+  },
+  "equipo": "Los Galaxis",
+  "direccion": "Calle 52 cc # 24 - 56",
+  "documento": 9445650
+},
+{
+  "_id": {
+    "$oid": "656b9beefe690b2bc6ceda46"
+  },
+  "nombre": "Arnol",
+  "apellido": "Gómez",
+  "edad": 44,
+  "telefono": {
+    "$numberLong": "3205678903"
+  },
+  "equipo": "Los Galaxis",
+  "direccion": "Calle 51 cc # 27 - 36",
+  "documento": 2445657
+},
+{
+  "_id": {
+    "$oid": "656b9beefe690b2bc6ceda47"
+  },
+  "nombre": "Andrés",
+  "apellido": "Ortiz",
+  "edad": 20,
+  "telefono": {
+    "$numberLong": "3205678904"
+  },
+  "equipo": "Los Chavales",
+  "direccion": "Calle 21 cc # 27 - 36",
+  "documento": 7445657
+},
+{
+  "_id": {
+    "$oid": "656b9beefe690b2bc6ceda48"
+  },
+  "nombre": "Adrian",
+  "apellido": "Vélez",
+  "edad": 19,
+  "telefono": {
+    "$numberLong": "3205378904"
+  },
+  "equipo": "Los Chavales",
+  "direccion": "Calle 61 cc # 27 - 36",
+  "documento": 9445657
+}]

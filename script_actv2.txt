@@ -1,0 +1,51 @@
+replicaSet = new ReplSetTest({name : "myReplicaSet", nodes : 3})
+
+replicaSet.startSet()
+
+replicaSet.initiate() 
+
+conn = new Mongo("Carlos-Benitez-22:20000")
+
+testDB = conn.getDB("torneo_relampago")
+
+testDB.isMaster()
+
+testDB.deportistas.insertOne({"nombre": "Juan", "apellido": "Urrueta", "edad": 24, "telefono": 3205678903, "equipo" : "Los Chavales", "direccion": "Calle 57 cc # 24 - 56", "documento": 3445657})
+testDB.deportistas.insertOne({"nombre": "Pedro", "apellido": "Benítez", "edad": 34, "telefono": 3205678903, "equipo" : "Los Galaxis", "direccion": "Calle 52 cc # 24 - 56", "documento": 9445650})
+testDB.deportistas.insertOne({"nombre": "Arnol", "apellido": "Gómez", "edad": 44, "telefono": 3205678903, "equipo" : "Los Galaxis", "direccion": "Calle 51 cc # 27 - 36", "documento":2445657}
+
+testDB.arbitros.insertOne({"nombre": "Adrian", "apellido": "Vélez", "Edad": 19, "telefono": 3205378904,"precio": 4566, "email" : "Los Chavales", "direccion": "Calle 61 cc # 27 - 36"})
+testDB.arbitros.insertOne({"nombre": "Carlos", "apellido": "Gallego", "Edad": 22, "telefono": 3205378404,"precio": 2566, "email" : "mailarbitro@ibero.edu.co", "direccion": "Calle 61 cc # 27 - 36"})
+testDB.arbitros.insertOne({"nombre": "Juanes", "apellido": "Romero", "Edad": 32, "telefono": 3045378404,"precio": 6566, "email" : "mailarbitro@ibero.edu.co", "direccion": "Calle 61 cc # 27 - 36"})
+
+
+testDB.deportistas.find() 
+
+testDB.deportistas.count()  
+
+connSecondary = new Mongo("Carlos-Benitez-22:20001")
+
+comando.secondaryTestDB=connSecondary.getDB("torneo_relampago")
+
+secondaryTestDB.isMaster()
+
+secondaryTestDB.deportistas.count()
+
+connSecondary.setSecondaryOk()
+
+secondaryTestDB.deportistas.find()
+
+secondaryTestDB.deportistas.count()
+
+connThird = new Mongo("Carlos-Benitez-22:20002")
+
+connThirdTestDB=connThird.getDB("torneo_relampago")
+
+connThird.setSecondaryOk()
+
+connThirdTestDB.deportistas.count(),connThirdTestDB.deportistas.find()
+
+testDB.adminCommand({shutdown : 1})
+
+replicaSet.stopSet()
+
